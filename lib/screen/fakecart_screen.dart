@@ -1,3 +1,9 @@
+/*
+  THIS SCREEN IS OBSOLETE & NOT NEEDED ANYMORE
+  FAKECHECKOUTSCREEN IS BEING USED INSTEAD
+*/
+
+
 import 'package:flutter/material.dart';
 
 class FakeCartScreen extends StatelessWidget{

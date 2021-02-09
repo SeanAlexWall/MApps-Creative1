@@ -1,4 +1,5 @@
 import 'package:Creative_1/screen/fakecart_screen.dart';
+import 'package:Creative_1/screen/fakecheckout_screen.dart';
 import 'package:flutter/material.dart';
 
 class FakeShoppingScreen extends StatelessWidget{
@@ -12,7 +13,7 @@ class FakeShoppingScreen extends StatelessWidget{
         actions: [
           IconButton(
             icon: Icon(Icons.shopping_cart, color: Colors.white),
-            onPressed: () => Navigator.pushNamed(context, FakeCartScreen.routeName),
+            onPressed: () => Navigator.pushNamed(context, FakeCheckoutScreen.routeName),
           ),
         ],
       ),
@@ -33,10 +34,34 @@ class FakeShoppingScreen extends StatelessWidget{
                     title: Text("Limbo"),
                     subtitle: Text("Ok Goodnight"),
                   ),
-                  RaisedButton(
-                    color: Colors.blue,
-                    child: Text('Add to "Cart"'),
-                    onPressed: () => print('Added to "Cart"!'),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      RaisedButton(
+                        color: Colors.blue,
+                        child: Text('Add to "Cart"'),
+                        onPressed: () => print('Added to "Cart"!'),
+                      ),
+                      SizedBox(width: 20.0),
+                      RaisedButton(
+                        color: Colors.grey,
+                        child: Text('Buy Now!"'),
+                        onPressed: () => Navigator.push(
+                          context, 
+                          MaterialPageRoute(
+                            builder: (context) => FakeCheckoutScreen.buyNow(
+                              context, 
+                              image: Image.network(
+                                "https://f4.bcbits.com/img/a3976433219_10.jpg"
+                              ),
+                              name: "Limbo",
+                              description: "Ok Goodnight",
+                              price: "\$10.00",
+                            )
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                 ]
               ),
@@ -52,10 +77,32 @@ class FakeShoppingScreen extends StatelessWidget{
                     leading: Text('\$1.00/lb'),
                     title: Text("Gala Apple"),
                   ),
-                  RaisedButton(
-                    color: Colors.blue,
-                    child: Text('Add to "Cart"'),
-                    onPressed: () => print('Added to "Cart"!'),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      RaisedButton(
+                        color: Colors.blue,
+                        child: Text('Add to "Cart"'),
+                        onPressed: () => print('Added to "Cart"!'),
+                      ),
+                      SizedBox(width: 20.0),
+                      RaisedButton(
+                        color: Colors.grey,
+                        child: Text('Buy Now!"'),
+                        onPressed: () => Navigator.push(
+                          context, 
+                          MaterialPageRoute(
+                            builder: (context) => FakeCheckoutScreen.buyNow(
+                              context, 
+                              image: Image.asset("images/apple.jpg"),
+                              name: "Gala Apple",
+                              description: " ",
+                              price: "\$1.00",
+                            )
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                 ]
               ),
@@ -71,10 +118,32 @@ class FakeShoppingScreen extends StatelessWidget{
                     leading: Text('\$3.00/ea'),
                     title: Text("Dragonfruit"),
                   ),
-                  RaisedButton(
-                    color: Colors.blue,
-                    child: Text('Add to "Cart"'),
-                    onPressed: () => print('Added to "Cart"!'),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      RaisedButton(
+                        color: Colors.blue,
+                        child: Text('Add to "Cart"'),
+                        onPressed: () => print('Added to "Cart"!'),
+                      ),
+                      SizedBox(width: 20.0),
+                      RaisedButton(
+                        color: Colors.grey,
+                        child: Text('Buy Now!"'),
+                        onPressed: () => Navigator.push(
+                          context, 
+                          MaterialPageRoute(
+                            builder: (context) => FakeCheckoutScreen.buyNow(
+                              context, 
+                              image: Image.asset("images/dragonfruit.png"),
+                              name: "Dragonfruit",
+                              description: " ",
+                              price: "\$3.00",
+                            )
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                 ]
               ),
@@ -90,10 +159,32 @@ class FakeShoppingScreen extends StatelessWidget{
                     leading: Text('\$1.50/lb'),
                     title: Text("Orange"),
                   ),
-                  RaisedButton(
-                    color: Colors.blue,
-                    child: Text('Add to "Cart"'),
-                    onPressed: () => print('Added to "Cart"!'),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      RaisedButton(
+                        color: Colors.blue,
+                        child: Text('Add to "Cart"'),
+                        onPressed: () => print('Added to "Cart"!'),
+                      ),
+                      SizedBox(width: 20.0),
+                      RaisedButton(
+                        color: Colors.grey,
+                        child: Text('Buy Now!"'),
+                        onPressed: () => Navigator.push(
+                          context, 
+                          MaterialPageRoute(
+                            builder: (context) => FakeCheckoutScreen.buyNow(
+                              context, 
+                              image: Image.asset("images/orange.jpg"),
+                              name: "Orange",
+                              description: " ",
+                              price: "\$1.50",
+                            )
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                 ]
               ),
@@ -110,10 +201,32 @@ class FakeShoppingScreen extends StatelessWidget{
                     title: Text("Pineapple"),
                     subtitle: Text("PPAP"),
                   ),
-                  RaisedButton(
-                    color: Colors.blue,
-                    child: Text('Add to "Cart"'),
-                    onPressed: () => print('Added to "Cart"!'),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      RaisedButton(
+                        color: Colors.blue,
+                        child: Text('Add to "Cart"'),
+                        onPressed: () => print('Added to "Cart"!'),
+                      ),
+                      SizedBox(width: 20.0),
+                      RaisedButton(
+                        color: Colors.grey,
+                        child: Text('Buy Now!"'),
+                        onPressed: () => Navigator.push(
+                          context, 
+                          MaterialPageRoute(
+                            builder: (context) => FakeCheckoutScreen.buyNow(
+                              context, 
+                              image: Image.asset("images/pineapple.png"),
+                              name: "Pineapple",
+                              description: "PPAP",
+                              price: "\$3.00",
+                            )
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                 ]
               ),
@@ -129,10 +242,32 @@ class FakeShoppingScreen extends StatelessWidget{
                     leading: Text('\$3.50/lb'),
                     title: Text("Strawberries"),
                   ),
-                  RaisedButton(
-                    color: Colors.blue,
-                    child: Text('Add to "Cart"'),
-                    onPressed: () => print('Added to "Cart"!'),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      RaisedButton(
+                        color: Colors.blue,
+                        child: Text('Add to "Cart"'),
+                        onPressed: () => print('Added to "Cart"!'),
+                      ),
+                      SizedBox(width: 20.0),
+                      RaisedButton(
+                        color: Colors.grey,
+                        child: Text('Buy Now!"'),
+                        onPressed: () => Navigator.push(
+                          context, 
+                          MaterialPageRoute(
+                            builder: (context) => FakeCheckoutScreen.buyNow(
+                              context, 
+                              image: Image.asset("images/strawberry.png"),
+                              name: "Strawberries",
+                              description: " ",
+                              price: "\$3.50",
+                            )
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                 ]
               ),

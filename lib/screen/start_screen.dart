@@ -1,5 +1,7 @@
 import 'package:Creative_1/screen/fakeshopping_screen.dart';
+import 'package:Creative_1/screen/filesdemo_screen.dart';
 import 'package:Creative_1/screen/linkdemo_screeen.dart';
+import 'package:Creative_1/utility/fileio.dart';
 import 'package:flutter/material.dart';
 
 class StartScreen extends StatelessWidget{
@@ -24,6 +26,24 @@ class StartScreen extends StatelessWidget{
               RaisedButton(
                 child: Text("Link Demo", style: Theme.of(context).textTheme.button),
                 onPressed: () => Navigator.pushNamed(context, LinkDemoScreen.routeName),
+              ),
+              RaisedButton(
+                child: Text("Write timestamp to file", style: Theme.of(context).textTheme.button),
+                onPressed: () => {FileIO.writeTimeStamp()}
+                
+              ),
+              RaisedButton(
+                child: Text("Read timestamp from file", style: Theme.of(context).textTheme.button),
+                onPressed: () { 
+                  FileIO.readTimeStamp()
+                    .then((value)  {
+                      FileIO.fileContents = value;
+                      Navigator.pushNamed(context, FilesDemoScreen.routeName);
+                    })
+                    .whenComplete(()  { 
+                      print("done");
+                    });
+                },
               ),
             ],
           ),

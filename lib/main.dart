@@ -1,6 +1,7 @@
 import 'package:Creative_1/screen/fakecart_screen.dart';
 import 'package:Creative_1/screen/fakecheckout_screen.dart';
 import 'package:Creative_1/screen/fakeshopping_screen.dart';
+import 'package:Creative_1/screen/filesdemo_screen.dart';
 import 'package:Creative_1/screen/linkdemo_screeen.dart';
 import 'package:Creative_1/screen/start_screen.dart';
 import 'package:flutter/material.dart';
@@ -32,6 +33,7 @@ class Creative1App extends StatelessWidget {
         FakeShoppingScreen.routeName : (context) => FakeShoppingScreen(),
         FakeCartScreen.routeName : (context) => FakeCartScreen(),
         FakeCheckoutScreen.routeName : (context) => FakeCheckoutScreen(context),
+        FilesDemoScreen.routeName : (context) => FilesDemoScreen()
       },
     );
   }
